@@ -8,7 +8,7 @@ use Tests\TestCase;
 class ExampleTest extends TestCase
 {
     public function testWarmupEvents() {
-        $response = $this->get('/warmupevents');
+        $response = $this->get('/events');
         $response->assertStatus(200)
             ->assertJsonCount(3)
             ->assertJsonPath('0.name', 'Laravel convention 2020')
